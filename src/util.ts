@@ -647,7 +647,7 @@ export interface ICheckResult {
  * @param severity error or warning
  * @param useStdErr If true, the stderr of the output of the given tool will be used, else stdout will be used
  * @param toolName The name of the Go tool to run. If none is provided, the go runtime itself is used
- * @param printUnexpectedOutput If true, then output that doesnt match expected format is printed to the output channel
+ * @param printUnexpectedOutput If true, then output that doesn't match expected format is printed to the output channel
  */
 export function runTool(
 	args: string[],
@@ -795,7 +795,7 @@ export function handleDiagnosticErrors(
 		const fileUri = vscode.Uri.parse(file);
 
 		if (diagnosticCollection === buildDiagnosticCollection) {
-			// If there are lint/vet warnings on current file, remove the ones co-inciding with the new build errors
+			// If there are lint/vet warnings on current file, remove the ones coinciding with the new build errors
 			if (lintDiagnosticCollection.has(fileUri)) {
 				lintDiagnosticCollection.set(
 					fileUri,
@@ -810,7 +810,7 @@ export function handleDiagnosticErrors(
 				);
 			}
 		} else if (buildDiagnosticCollection.has(fileUri)) {
-			// If there are build errors on current file, ignore the new lint/vet warnings co-inciding with them
+			// If there are build errors on current file, ignore the new lint/vet warnings coinciding with them
 			newDiagnostics = deDupeDiagnostics(buildDiagnosticCollection.get(fileUri).slice(), newDiagnostics);
 		}
 		diagnosticCollection.set(fileUri, newDiagnostics);
@@ -1000,7 +1000,7 @@ export function runGodoc(
 				}
 
 				// Recent versions of Go have started to include the package statement
-				// tht we dont need.
+				// that we don't need.
 				if (godocLines[0].startsWith('package ')) {
 					godocLines.splice(0, 1);
 					if (!godocLines[0].trim()) {

@@ -230,7 +230,7 @@ declare module _ {
     interface LoDashExplicitObjectWrapper<T> extends LoDashExplicitWrapperBase<T, LoDashExplicitObjectWrapper<T>> { }
 
     interface LoDashImplicitArrayWrapper<T> extends LoDashImplicitWrapperBase<T[], LoDashImplicitArrayWrapper<T>> {
-        join(seperator?: string): string;
+        join(separator?: string): string;
         pop(): T;
         push(...items: T[]): LoDashImplicitArrayWrapper<T>;
         shift(): T;
@@ -2849,7 +2849,7 @@ declare module _ {
         * If an object is provided for callback the created "_.where" style callback will return
         * true for elements that have the properties of the given object, else false.
         * @param array Array to remove duplicates from.
-        * @param isSorted True if `array` is already sorted, optiona, default = false.
+        * @param isSorted True if `array` is already sorted, optional, default = false.
         * @param iterator Transform the elements of `array` before comparisons for uniqueness.
         * @param context 'this' object in `iterator`, optional.
         * @return Copy of `array` where all elements are unique.
@@ -3582,7 +3582,7 @@ declare module _ {
          *
          * @param value The value to provide to interceptor.
          * @param interceptor The function to invoke.
-         * @parem thisArg The this binding of interceptor.
+         * @param thisArg The this binding of interceptor.
          * @return Returns value.
          **/
         tap<T>(
@@ -7798,7 +7798,7 @@ declare module _ {
             ...iteratees: (ListIterator<T, any>|string|Object)[]): T[];
 
         /**
-         * Sorts by all the given arguments, using either ListIterator, pluckValue, or whereValue foramts
+         * Sorts by all the given arguments, using either ListIterator, pluckValue, or whereValue formats
          * @param args The rules by which to sort
          */
         sortByAll<T>(
@@ -7809,7 +7809,7 @@ declare module _ {
 
     interface LoDashImplicitArrayWrapper<T> {
         /**
-         * Sorts by all the given arguments, using either ListIterator, pluckValue, or whereValue foramts
+         * Sorts by all the given arguments, using either ListIterator, pluckValue, or whereValue formats
          * @param args The rules by which to sort
          */
         sortByAll(...args: (ListIterator<T, boolean>|Object|string)[]): LoDashImplicitArrayWrapper<T>;
@@ -9491,7 +9491,7 @@ declare module _ {
         /**
          * Checks if value is a native function.
          * @param value The value to check.
-         * @retrun Returns true if value is a native function, else false.
+         * @return Returns true if value is a native function, else false.
          */
         isNative(value: any): value is Function;
     }
@@ -11688,7 +11688,7 @@ declare module _ {
         * If a property name is provided iteratee the created "_.property" style callback returns
         * the property value of the given element.
         *
-        * If a value is also provided for thisArg the creted "_.matchesProperty" style callback returns
+        * If a value is also provided for thisArg the created "_.matchesProperty" style callback returns
         * true for elements that have a matching property value, else false;.
         *
         * If an object is provided for iteratee the created "_.matches" style callback returns true

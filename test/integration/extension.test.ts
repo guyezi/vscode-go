@@ -402,7 +402,7 @@ It returns the number of bytes written and any write error encountered.
 			[
 				new vscode.Position(27, 14),
 				'type ABC struct {\n    a int\n    b int\n    c int\n}',
-				`ABC is a struct, you coudn't use Goto Definition or Hover info on this before\nNow you can due to gogetdoc and go doc\n`
+				`ABC is a struct, you couldn't use Goto Definition or Hover info on this before\nNow you can due to gogetdoc and go doc\n`
 			],
 			[
 				new vscode.Position(28, 6),
@@ -1243,7 +1243,7 @@ encountered.
 		const testCases: [vscode.Position, string[]][] = [
 			[new vscode.Position(6, 4), ['Language']],
 			[new vscode.Position(9, 4), ['GreetingText']],
-			// checking for comment completions with begining of comment without space
+			// checking for comment completions with beginning of comment without space
 			[new vscode.Position(12, 2), []],
 			// cursor between /$/ this should not trigger any completion
 			[new vscode.Position(12, 1), []],
@@ -1399,7 +1399,7 @@ encountered.
 			(diagnostics) => {
 				assert.equal(1, diagnostics.length, 'check with buildtag failed. Unexpected errors found');
 				assert.equal(1, diagnostics[0].errors.length, 'check with buildtag failed. Unexpected errors found');
-				assert.equal(diagnostics[0].errors[0].msg, 'undefined: fmt.Prinln');
+				assert.equal(diagnostics[0].errors[0].msg, 'undefined: fmt.Println_');
 			}
 		);
 
@@ -1420,7 +1420,7 @@ encountered.
 				diagnostics[0].errors.length,
 				'check with multiple buildtags failed. Unexpected errors found'
 			);
-			assert.equal(diagnostics[0].errors[0].msg, 'undefined: fmt.Prinln');
+			assert.equal(diagnostics[0].errors[0].msg, 'undefined: fmt.Println_');
 		});
 
 		const config3 = Object.create(vscode.workspace.getConfiguration('go'), {
